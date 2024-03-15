@@ -2,14 +2,14 @@
 
 """More involved type annotation"""
 
-from typing import TypeVar, Mapping, Any, Optional
+from typing import TypeVar, Mapping, Any, Union
 
-KT = TypeVar('KT')  # Key Type
-VT = TypeVar('VT')  # Value Type
+
+T = TypeVar('T')  # Value Type
 
 
 def safely_get_value(dct: Mapping, key: Any, default:
-                     Optional[VT] = None) -> Optional[VT]:
+                     Union[T, None] = None) -> Union[Any, T]:
     """
     Add type annotation to the function
     :param dct:

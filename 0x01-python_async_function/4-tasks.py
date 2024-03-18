@@ -4,7 +4,7 @@
     random delays using task_wait random()
 """
 
-from typing import List
+from typing import List, Any
 import asyncio
 
 try:
@@ -13,7 +13,7 @@ except ImportError:
     pass
 
 
-async def task_wait_n(n: int, max_delay: int) -> List[asyncio.Task]:
+async def task_wait_n(n: int, max_delay: int) -> List[Any]:
     """
     Generate a list of asyncio.Tasks for random
     delays using task_wait_random.

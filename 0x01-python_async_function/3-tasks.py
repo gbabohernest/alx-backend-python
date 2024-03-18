@@ -14,7 +14,7 @@ except ImportError:
     pass
 
 
-def task_wait_random(max_delay):
+def task_wait_random(max_delay: int) -> asyncio.Task:
     """
      Creates and returns an asyncio.Task for the
      wait_random coroutine with the given max_delay.

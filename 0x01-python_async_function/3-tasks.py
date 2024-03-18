@@ -5,7 +5,7 @@
     and return an asyncio.Task
 """
 
-from typing import Any
+# from typing import Any
 import asyncio
 
 try:
@@ -14,7 +14,7 @@ except ImportError:
     pass
 
 
-def task_wait_random(max_delay: int) -> Any:
+def task_wait_random(max_delay):
     """
      Creates and returns an asyncio.Task for the
      wait_random coroutine with the given max_delay.

@@ -9,3 +9,4 @@ This repository is a comprehensive collection of Python backend projects tailore
 | Project                                                                      | Description                                                             |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | [`0x00. Python - Variable Annotations`](./0x00-python_variable_annotations/) | Python Annotation - **`function annotation`** **`variable annotation`** |
+| [`0x01. Python - Async`](./0x01-python_async_function/)                      | Python - Async IO:  **`async`** **`await`** **`asyncio`** **`random`**  |

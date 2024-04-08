@@ -25,6 +25,8 @@ class TestAccessNestedMap(unittest.TestCase):
             self, nested_map: Mapping,
             path: Sequence,
             expected_result: Any) -> None:
+        """Test access_nested_map function for correct output
+        """
         self.assertEqual(access_nested_map(nested_map, path), expected_result)
 
 

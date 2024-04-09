@@ -4,10 +4,12 @@
 
 import unittest
 from unittest.mock import patch, PropertyMock
-from parameterized import parameterized
+from parameterized import parameterized, parameterized_class
+from requests import HTTPError
 
 from client import GithubOrgClient
 from typing import Dict
+from fixtures import TEST_PAYLOAD
 
 
 class TestGithubOrgClient(unittest.TestCase):
@@ -136,7 +138,10 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         cls.get_patcher.stop()
 
     def test_public_repos(self) -> None:
-        """Tests the public_repos method."""
+        """Implements Tests public_repos method
+           to test GithubOrgClient.public_repos method
+           expected results based on the fixtures.
+        """
 
         github_client = GithubOrgClient("google")
         public_repos = github_client.public_repos()
@@ -144,8 +149,9 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         self.assertEqual(public_repos, self.expected_repos)
 
     def test_public_repos_with_license(self) -> None:
-        """Tests public_repos_with_license method."""
-
+        """Implements Tests public_repos_with_license method
+           to test GithubOrgClient.public_repos method.
+        """
         github_client = GithubOrgClient("google")
         apache2_repos = github_client.public_repos(license="apache-2.0")
 
